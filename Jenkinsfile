@@ -8,7 +8,7 @@ pipeline {
         stage('Step1: Git') {
             steps {
                 git branch 'Master'
-                git url : https://github.com/Madhav-07/SPE-Mini-Project.git
+                git url 'https://github.com/Madhav-07/SPE-Mini-Project.git'
             }
         }
         stage('Step2: Maven Build') {
