@@ -17,14 +17,19 @@ pipeline {
                 sh "mvn install"
             }
         }
-        // stage('Step3: Docker Create Image') {
-        //     steps {
+        stage('Step3: Docker Create Image') {
+            steps {
 
+            }
+        }
+        // stage('Step Misc: Run') {
+        //     steps {
+        //         sh "java -cp ./target/calculator-1.0-SNAPSHOT.jar com.example.Calculator"
         //     }
         // }
-        stage('Step Misc: Run') {
+        stage('Step4: Docker Pull') {
             steps {
-                sh "java -cp ./target/calculator-1.0-SNAPSHOT.jar com.example.Calculator"
+
             }
         }
     }
