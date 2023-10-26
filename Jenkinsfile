@@ -22,5 +22,10 @@ pipeline {
 
         //     }
         // }
+        stage('Step Misc: Run') {
+            steps {
+                sh "java -cp ./target/calculator-1.0-SNAPSHOT.jar com.example.Calculator"
+            }
+        }
     }
 }
