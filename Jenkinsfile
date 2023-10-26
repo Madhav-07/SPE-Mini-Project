@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        docker=""
+        image=""
     }
     
     agent any
@@ -17,10 +17,10 @@ pipeline {
                 sh "mvn install"
             }
         }
-        stage('Step3: Docker Create') {
-            steps {
+        // stage('Step3: Docker Create Image') {
+        //     steps {
 
-            }
-        }
+        //     }
+        // }
     }
 }
