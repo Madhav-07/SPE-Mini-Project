@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Step3: Docker Create Image') {
             steps {
-
+                
             }
         }
         // stage('Step Misc: Run') {
