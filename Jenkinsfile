@@ -1,6 +1,7 @@
 pipeline {
     environment {
-        image=""
+        image = ""
+        docker_token = "Dockerhub"
     }
     
     agent any
@@ -17,11 +18,11 @@ pipeline {
                 sh "mvn install"
             }
         }
-        // stage('Step3: Docker Create Image') {
-        //     steps {
-                
-        //     }
-        // }
+        stage('Step3: Docker Create Image') {
+            steps {
+                    image = docker.build('madhav022/calculator:latest')
+            }
+        }
         // stage('Step Misc: Run') {
         //     steps {
         //         sh "java -cp ./target/calculator-1.0-SNAPSHOT.jar com.example.Calculator"
@@ -32,5 +33,12 @@ pipeline {
 
         //     }
         // }
+        stage('Step4: Docker Image Push') {
+            steps {
+                // docker.registry('', 'Dockerhub') {
+                    image.push()
+                // }
+            }
+        }
     }
 }
