@@ -20,7 +20,9 @@ pipeline {
         }
         stage('Step3: Docker Create Image') {
             steps {
-                image = docker.build('madhav022/calculator:latest')
+                script {
+                    image = docker.build('madhav022/calculator:latest')
+                }
             }
         }
         // stage('Step Misc: Run') {
