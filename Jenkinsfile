@@ -35,9 +35,9 @@ pipeline {
         // }
         stage('Step4: Docker Image Push') {
             steps {
-                // docker.registry('', 'Dockerhub') {
+                docker.registry('', docker_token) {
                     image.push()
-                // }
+                }
             }
         }
     }
