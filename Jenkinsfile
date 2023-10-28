@@ -53,7 +53,7 @@ pipeline {
             steps {
                 ansiblePlaybook becomeUser: null,
                 colorized: true,
-                credentialsId: 'localhost',
+                credentialsId: 'localhost_cred',
                 disableHostKeyChecking: true,
                 inventory: 'deployment/inventory',
                 playbook: 'deployment/deploying.yaml',
