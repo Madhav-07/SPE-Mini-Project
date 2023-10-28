@@ -55,8 +55,8 @@ pipeline {
                 colorized: true,
                 credentialsId: 'localhost',
                 disableHostKeyChecking: true,
-                inventory: 'Deployment/inventory',
-                playbook: 'Deployment/deploying.yaml',
+                inventory: 'deployment/inventory',
+                playbook: 'deployment/deploying.yaml',
                 sudoUser: null
             }
         }
