@@ -1,1 +1,1 @@
-localhost ansible_user=madhav
+172.16.133.16 ansible_user=madhav
