@@ -1,7 +1,6 @@
 ---
 - name: Docker Pull of Calculator App
   hosts: all
-  # become: yes
   vars:
     - image: madhav022/calculator
   tasks:
