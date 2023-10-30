@@ -18,6 +18,6 @@
       command: docker create --name Calculator_app {{image}}
       register: output
 
-    - name: Docker Output
-      debug:
-        msg: '{{output.stdout}}'
+    # - name: Docker Output
+    #   debug:
+    #     msg: '{{output.stdout}}'
