@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         Calculator cal = new Calculator();
         int choice = 0;
         while(choice != 5) {
@@ -15,7 +14,9 @@ public class Main {
             System.out.println("4. Division");
             System.out.println("5. Exit");
             System.out.print("Enter Choice: ");
+            Scanner sc = new Scanner(System.in);
             choice = sc.nextInt();
+            sc.close();
             switch(choice) {
                 case 1:
                     cal.addition();
@@ -35,7 +36,5 @@ public class Main {
                     System.out.println("Please enter valid choice");
             }
         }
-
-        sc.close();
     }
 }
