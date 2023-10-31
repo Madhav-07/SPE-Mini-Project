@@ -1,5 +1,5 @@
 ---
-- name: Docker Pull of Calculator App
+- name: Deployment of Calculator App
   hosts: all
   vars:
       - image: madhav022/calculator

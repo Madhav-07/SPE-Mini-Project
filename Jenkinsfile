@@ -44,7 +44,7 @@ pipeline {
         //         sh "docker image prune -f && docker container prune -f"
         //     }
         // }
-        stage('Step5: Using Ansible to Deploy Calculator') {
+        stage('Step5: Using Ansible to Deploy Calculator App') {
             steps {
                 ansiblePlaybook becomeUser: null,
                 colorized: true,
