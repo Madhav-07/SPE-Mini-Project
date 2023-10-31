@@ -34,7 +34,7 @@ public class Main {
                 default:
                     System.out.println("Please enter valid choice");
             }
+            sc.close();
         }
-        sc.close();
     }
 }
