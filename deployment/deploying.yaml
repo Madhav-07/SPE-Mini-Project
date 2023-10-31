@@ -20,7 +20,7 @@
 
       - name: Display Docker Images Removed
         debug:
-          msg: '{{output.stdout}}'
+          msg: Deleted Docker Image IDs:'{{output.stdout}}'
 
       - name: Removing Old Docker Containers
         command: docker container prune -f
@@ -28,7 +28,7 @@
 
       - name: Display Docker Containers Removed
         debug:
-          msg: '{{output.stdout}}'
+          msg: Deleted Docker Container IDs:'{{output.stdout}}'
 
       - name: Docker Run
         command: docker create -it --name Calculator_app {{image}}
@@ -36,4 +36,4 @@
 
       - name: Docker Container Creation Output
         debug:
-          msg: '{{output.stdout}}'
+          msg: Docker Container Created ID:'{{output.stdout}}'
