@@ -16,19 +16,18 @@ public class Main {
             System.out.print("Enter Choice: ");
             Scanner sc = new Scanner(System.in);
             choice = sc.nextInt();
-            sc.close();
             switch(choice) {
                 case 1:
-                    cal.addition();
+                    cal.addition(sc);
                     break;
                 case 2:
-                    cal.subtraction();
+                    cal.subtraction(sc);
                     break;
                 case 3:
-                    cal.multiplication();
+                    cal.multiplication(sc);
                     break;
                 case 4:
-                    cal.division();
+                    cal.division(sc);
                     break;
                 case 5:
                     break;
@@ -36,5 +35,6 @@ public class Main {
                     System.out.println("Please enter valid choice");
             }
         }
+        sc.close();
     }
 }
