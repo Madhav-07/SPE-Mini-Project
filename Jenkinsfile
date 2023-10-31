@@ -39,12 +39,12 @@ pipeline {
                 }
             }
         }
-        stage('Step5: Deleting Old versions of Docker Images & Containers') {
-            steps {
-                sh "docker image prune -f && docker container prune -f"
-            }
-        }
-        stage('Step6: Using Ansible to Deploy Calculator') {
+        // stage('Step5: Deleting Old versions of Docker Images & Containers') {
+        //     steps {
+        //         sh "docker image prune -f && docker container prune -f"
+        //     }
+        // }
+        stage('Step5: Using Ansible to Deploy Calculator') {
             steps {
                 ansiblePlaybook becomeUser: null,
                 colorized: true,
