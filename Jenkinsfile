@@ -30,11 +30,6 @@ pipeline {
         //         sh "java -cp ./target/calculator-1.0-SNAPSHOT.jar com.example.Calculator"
         //     }
         // }
-        // stage('Step4: Docker Pull') {
-        //     steps {
-
-        //     }
-        // }
         stage('Step4: Docker Image Push') {
             steps {
                 script {
