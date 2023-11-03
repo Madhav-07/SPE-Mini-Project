@@ -22,19 +22,19 @@
         debug:
           msg: '{{output.stdout}}'
 
-      - name: Removing Old Docker Images
-        command: docker image prune -f
-        register: output
-
-      - name: Display Docker Images Removed
-        debug:
-          msg: '{{output.stdout}}'
-
       - name: Removing Old Docker Containers
         command: docker container prune -f
         register: output
 
       - name: Display Docker Containers Removed
+        debug:
+          msg: '{{output.stdout}}'
+
+      - name: Removing Old Docker Images
+        command: docker image prune -f
+        register: output
+
+      - name: Display Docker Images Removed
         debug:
           msg: '{{output.stdout}}'
 
