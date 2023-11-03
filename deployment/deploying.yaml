@@ -23,7 +23,7 @@
           msg: '{{output.stdout}}'
 
       - name: Removing Old Docker Images
-        command: docker rmi $(docker images -f dangling=true)
+        command: docker image prune -f
         register: output
 
       - name: Display Docker Images Removed
