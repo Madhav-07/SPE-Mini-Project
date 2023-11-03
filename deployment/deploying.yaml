@@ -30,7 +30,7 @@
         debug:
           msg: '{{output.stdout}}'
 
-      - name: Docker Run
+      - name: Docker Create
         command: docker create -it --name Calculator_app {{image}}
         register: output
 
