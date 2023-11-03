@@ -25,11 +25,6 @@ pipeline {
                 }
             }
         }
-        // stage('Step Misc: Run') {
-        //     steps {
-        //         sh "java -cp ./target/calculator-1.0-SNAPSHOT.jar com.example.Calculator"
-        //     }
-        // }
         stage('Step4: Docker Image Push') {
             steps {
                 script {
@@ -39,11 +34,6 @@ pipeline {
                 }
             }
         }
-        // stage('Step5: Deleting Old versions of Docker Images & Containers') {
-        //     steps {
-        //         sh "docker image prune -f && docker container prune -f"
-        //     }
-        // }
         stage('Step5: Using Ansible to Deploy Calculator App') {
             steps {
                 ansiblePlaybook becomeUser: null,
