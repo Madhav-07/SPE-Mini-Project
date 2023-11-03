@@ -14,6 +14,14 @@
             name: '{{image}}'
             source: pull
 
+      - name: Docker Images
+        command: docker images
+        register: output
+      
+      - name: Display Images
+        debug:
+          msg: '{{output.stdout}}'
+
       - name: Removing Old Docker Images
         command: docker image prune -f
         register: output
