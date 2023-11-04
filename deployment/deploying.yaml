@@ -14,22 +14,6 @@
             name: '{{image}}'
             source: pull
 
-      - name: Removing Old Docker Containers
-        command: docker container prune -f
-        register: output
-
-      - name: Display Docker Containers Removed
-        debug:
-          msg: '{{output.stdout}}'
-
-      - name: Removing Old Docker Images
-        command: docker image prune -f
-        register: output
-
-      - name: Display Docker Images Removed
-        debug:
-          msg: '{{output.stdout}}'
-
       - name: Docker Create
         command: docker create -it --name Calculator_app {{image}}
         register: output

@@ -34,7 +34,10 @@ pipeline {
                 }
             }
         }
-        stage('Step5: Using Ansible to Deploy Calculator App') {
+        stage('Step5: Delete Old Docker Images & Docker Containers') {
+            sh "docker container prune -f && docker image prune -f"
+        }
+        stage('Step6: Using Ansible to Deploy Calculator App') {
             steps {
                 ansiblePlaybook becomeUser: null,
                 colorized: true,
