@@ -35,7 +35,9 @@ pipeline {
             }
         }
         stage('Step5: Delete Old Docker Images & Docker Containers') {
-            sh "docker container prune -f && docker image prune -f"
+            steps {
+                sh "docker container prune -f && docker image prune -f"
+            }
         }
         stage('Step6: Using Ansible to Deploy Calculator App') {
             steps {
