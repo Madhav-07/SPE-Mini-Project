@@ -13,6 +13,11 @@
         docker_image:
             name: '{{image}}'
             source: pull
+        register: output
+
+      - name: Docker Pull Output
+        debug:
+          msg: '{{output.stdout}}'
 
       - name: Removing Old Docker Containers
         command: docker container prune -f
