@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Calculator cal = new Calculator();
         int choice = 0;
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = Input.getInstance();
         while(choice != 5) {
             System.out.println("\nWelcome to the Calculator Program:" );
             System.out.println("1. Addition");
@@ -18,16 +18,16 @@ public class Main {
             choice = sc.nextInt();
             switch(choice) {
                 case 1:
-                    cal.addition(sc);
+                    cal.addition();
                     break;
                 case 2:
-                    cal.subtraction(sc);
+                    cal.subtraction();
                     break;
                 case 3:
-                    cal.multiplication(sc);
+                    cal.multiplication();
                     break;
                 case 4:
-                    cal.division(sc);
+                    cal.division();
                     break;
                 case 5:
                     break;
@@ -35,6 +35,6 @@ public class Main {
                     System.out.println("Please enter valid choice");
             }
         }
-        sc.close();
+        Input.close();
     }
 }
