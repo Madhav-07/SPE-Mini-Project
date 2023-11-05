@@ -2,13 +2,14 @@ package com.example;
 
 import java.util.Scanner;
 
-public class Input {
+public class scanner {
     private static Scanner sc;
 
-    private Input() {}
+    private scanner() {
+    }
 
     public static Scanner getInstance() {
-        if(sc == null) {
+        if (sc == null) {
             sc = new Scanner(System.in);
         }
 
@@ -16,7 +17,7 @@ public class Input {
     }
 
     public static void close() {
-        if(sc != null) {
+        if (sc != null) {
             sc.close();
         }
     }
