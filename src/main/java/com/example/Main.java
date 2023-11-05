@@ -44,7 +44,7 @@ public class Main {
                     System.out.println("Result = " + cal.division(op1, op2));
                     break;
                 case 5:
-                    System.out.println("Exiting Calculator Program");
+                    System.out.println("\nExiting Calculator Program");
                     break;
                 default:
                     System.out.println("Please enter valid choice");
