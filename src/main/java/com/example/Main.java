@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Main {
     private static double op1, op2;
     private static Scanner sc;
+    
 
     private static void input(String operation) {
         System.out.println("\n" + operation + " Operation:\nEnter Operands:");
